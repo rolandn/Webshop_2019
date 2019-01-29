@@ -1,4 +1,4 @@
 package couchePresentation;
 
-public class ListerClient {
+public class AjouterBiere {
 }

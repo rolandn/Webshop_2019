@@ -22,7 +22,7 @@ public class AlcoolDAO extends BaseDAO<Alcool>
      * Le caractère "?" en sql correspond à "1" dans sqlCmd et qui renvoie le "num".
      */
 
-    public Alcool Charger(int num) throws ExceptionAccessBD
+    public Alcool Charger(int num) throws ExeceptionAccessBD
     {
         Alcool alcool = null;
 
@@ -72,12 +72,11 @@ public class AlcoolDAO extends BaseDAO<Alcool>
             catch (Exception e1)
             {
             }
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
     }
 
-    public boolean Ajouter(Alcool obj) throws ExceptionAccessBD
-    {
+    public boolean Ajouter(Alcool obj) throws ExeceptionAccessBD, ExeceptionAccessBD {
 
         try
         {
@@ -136,7 +135,7 @@ public class AlcoolDAO extends BaseDAO<Alcool>
             catch (Exception e1)
             {
             }
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
     }
 
