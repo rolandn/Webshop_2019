@@ -28,18 +28,8 @@ public class ListerAlcool extends BaseFenetre{
         super(fenParent, "ListerProfesseursVue.xml", "Lister les professeurs", 475, 300);
             // ajouter la liste des professeurs à la table TVProfs
 
-        try
-        {
-            TVAlcool.itemsProperty().setValue(FXCollections.observableArrayList(
-                    FabriqueDAO.getInstance().getInstAlcoolDAO().ListerTous()));
-        }
-        catch(ExeceptionAccessBD e)
-        {
-            GererErreur.GererErreurSQL("ListerProfesseurs", "ListerProfesseurs()", e.getMessage());
-            new MsgBox(this, AlertType.ERROR,
-                    "Problème de base de données lors du listage des professeurs!");
-            return;
-        }
+        TVAlcool.itemsProperty().setValue(FXCollections.observableArrayList(
+                FabriqueDAO.getInstance().getInstAlcoolDAO().ListerTous()));
         if(TVAlcool.getItems().size() == 0)
         {
             new MsgBox(this, AlertType.INFORMATION,
