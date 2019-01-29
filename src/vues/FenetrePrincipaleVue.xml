@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu text="Professeurs">
+                    <items>
+                        <MenuItem text="Lister les professeurs" onAction="#MListerProfs" />
+                    </items>
+                </Menu>
+                <Menu text="Cours">
+                    <items>
+                        <MenuItem text="Lister les cours" onAction="#MListerCours" />
+                    </items>
+                </Menu>
+                <Menu text="Elèves">
+                    <items>
+                        <MenuItem text="Lister les élèves" onAction="#MListerEleves" />
+                        <MenuItem text="Ajouter un élève" onAction="#MAjouterEleve" />
+                        <MenuItem text="Modifier un élève" onAction="#MModifierEleve" />
+                        <MenuItem text="Supprimer un élève" onAction="#MSupprimerEleve" />
+                        70
+                    </items>
+                </Menu>
+                <Menu text="Résultats">
+                    <items>
+                        <MenuItem text="Lister les résultats" onAction="#MListerResultatsEleve" />
+                        <MenuItem text="Ajouter un résultat dans un cours" onAction="#MAjouterResultat" />
+                    </items>
+                </Menu>
+                <Menu text="Quitter">
+                    <items>
+                        <MenuItem text="Quitter le programme" onAction="#MQuitter" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

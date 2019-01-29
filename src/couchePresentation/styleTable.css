@@ -1,0 +1,10 @@
+
+.table-row-cell:selected {
+-fx-table-cell-border-color: #C0C0C0;
+-fx-background-color: lightgrey;
+}
+
+.table-view .table-cell{
+-fx-text-fill: black;
+-fx-alignment: center;
+}
