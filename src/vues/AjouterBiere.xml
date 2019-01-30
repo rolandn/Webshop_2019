@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <HBox spacing="15">
+            <children>
+                <GridPane hgap="8" vgap="8">
+                    <children>
+                        <Label text="NumArticle: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="TFNumArticle" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Nom: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="TFNom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Prix : " GridPane.columnIndex="0"
+                               GridPane.rowIndex="2" prefWidth="160" />
+                        <TextField fx:id="TFPrix" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="70" />
+
+                        <Label text="Quantité en stock: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <TextField fx:id="TFQuantiteStock" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                        <Label text="Goût: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <TextField fx:id="TFGout" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                        <Label text="Récipient: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <TextField fx:id="TFRecipient" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+
+                        <ComboBox fx:id="CBAlcool" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="1" />
+                                    <String fx:value="0" />
+                                </FXCollections>
+                            </items>
+                            <value>
+                                <String fx:value="1" />
+                            </value>
+                        </ComboBox>
+
+
+
+                        <Label text="Photo: " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+
+                        <HBox GridPane.columnIndex="1" GridPane.rowIndex="5" spacing="15">
+                            <children>
+                                <TextField fx:id="TFNomImage" text="aucuneimage.jpg" disable="true"
+                                           style="-fx-opacity: 1.0" />
+                                <Button fx:id="BChargerImage" prefWidth="20" prefHeight="20"
+                                        onAction="#BOuvrirFichierImg" text="..." />
+                            </children>
+                        </HBox>
+                    </children>
+                </GridPane>
+
+                <ImageView fx:id="IVImage" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <image>
+                        <Image url="file:imgs/imgseleves/aucuneimage.jpg" />
+                    </image>
+                    <HBox.margin>
+                        <Insets top="15" right="0" bottom="15" left="0" />
+                    </HBox.margin>
+                </ImageView>
+            </children>
+            <VBox.margin>
+                <Insets top="15" right="15" bottom="10" left="15" />
+            </VBox.margin>
+        </HBox>
+
+        <Separator>
+            <VBox.margin>
+                <Insets top="0" right="15" bottom="0" left="15" />
+            </VBox.margin>
+        </Separator>
+
+        <HBox spacing="15">
+            <children>
+                <Button fx:id="BAjouter" prefWidth="80" prefHeight="20" onAction="#BAjouterEleve"
+                        text="Ajouter" />
+                <Button fx:id="BFermer" prefWidth="80" prefHeight="20" onAction="#BFermer" text="Fermer" />
+            </children>
+
+            <VBox.margin>
+                <Insets top="10" right="0" bottom="12" left="400" />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

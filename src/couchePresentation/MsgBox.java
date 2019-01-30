@@ -1,5 +1,9 @@
 package couchePresentation;
 
+import vues.*;
+import coucheAccesDB.*;
+import ClassMetier.*;
+
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;

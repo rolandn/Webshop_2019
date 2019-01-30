@@ -25,7 +25,7 @@ public class ListerAlcool extends BaseFenetre{
     public ListerAlcool(Stage fenParent)
     {
             // créer la fenêtre
-        super(fenParent, "ListerProfesseursVue.xml", "Lister les professeurs", 475, 300);
+        super(fenParent, "ListerProfesseursVue.xml", "Lister les alcools", 475, 300);
             // ajouter la liste des professeurs à la table TVProfs
 
         TVAlcool.itemsProperty().setValue(FXCollections.observableArrayList(
@@ -33,14 +33,14 @@ public class ListerAlcool extends BaseFenetre{
         if(TVAlcool.getItems().size() == 0)
         {
             new MsgBox(this, AlertType.INFORMATION,
-                    "Il n'y a aucun professeur dans la base de données!");
+                    "Il n'y a aucun alcool dans la base de données!");
             return;
         }
 // gérer l'affichage de l'image quand on clique sur un professeur dans la table
-        TVAlcool.getSelectionModel().selectedItemProperty().addListener((obs, ancProf,
-                                                                        nouvProf) ->
+        TVAlcool.getSelectionModel().selectedItemProperty().addListener((obs, ancAlcool,
+                                                                        nouvAlcool) ->
         {
-            if (nouvProf != null)
+            if (nouvAlcool != null)
                 IVImage.setImage(new Image("file:imgs/imgsprofs/" + nouvProf.getNomImage()));
         });
 // sélectionner le 1er prof dans la table TVProfs
@@ -51,8 +51,7 @@ public class ListerAlcool extends BaseFenetre{
     /**
      * Méthode exécutée lorsque l'utilisateur clique sur le bouton Fermer
      */
-    @FXML
-    private void BFermer(ActionEvent event)
+    @FXML private void BFermer(ActionEvent event)
     {
         close();
     }

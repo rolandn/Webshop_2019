@@ -11,31 +11,26 @@
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
-                <Menu text="Professeurs">
+                <Menu text="Bières">
                     <items>
-                        <MenuItem text="Lister les professeurs" onAction="#MListerProfs" />
+                        <MenuItem text="Lister les bières" onAction="#" />
+                        <MenuItem text="Ajouter une bière" onAction="#BAjouterBiere" />
+                        <MenuItem text="Modifier la quantité en stock" onAction="#" />
+                        <MenuItem text="Archiver/désarchiver une bière" onAction="#" />
                     </items>
                 </Menu>
-                <Menu text="Cours">
+
+                <Menu text="Alcools">
                     <items>
-                        <MenuItem text="Lister les cours" onAction="#MListerCours" />
+                        <MenuItem text="Lister les alcools" onAction="#" />
+                        <MenuItem text="Ajouter une alcool" onAction="#BAjouterAlcool" />
+                        <MenuItem text="Modifier la quantité en stock" onAction="#" />
+                        <MenuItem text="Archiver/désarchiver un alcool" onAction="#" />
                     </items>
                 </Menu>
-                <Menu text="Elèves">
-                    <items>
-                        <MenuItem text="Lister les élèves" onAction="#MListerEleves" />
-                        <MenuItem text="Ajouter un élève" onAction="#MAjouterEleve" />
-                        <MenuItem text="Modifier un élève" onAction="#MModifierEleve" />
-                        <MenuItem text="Supprimer un élève" onAction="#MSupprimerEleve" />
-                        70
-                    </items>
-                </Menu>
-                <Menu text="Résultats">
-                    <items>
-                        <MenuItem text="Lister les résultats" onAction="#MListerResultatsEleve" />
-                        <MenuItem text="Ajouter un résultat dans un cours" onAction="#MAjouterResultat" />
-                    </items>
-                </Menu>
+
+
+
                 <Menu text="Quitter">
                     <items>
                         <MenuItem text="Quitter le programme" onAction="#MQuitter" />

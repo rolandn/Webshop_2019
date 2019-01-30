@@ -52,4 +52,6 @@ public class FabriqueDAO
 
 
     public LigneComDAO getInsLigneComDAO() {return new LigneComDAO(SqlConn);}
+
+    public Object getBiereDAO() {return new BiereDAO(SqlConn);}
 }
