@@ -35,7 +35,7 @@ public class Biere extends Produit {
         return this.Alcool;
     }
 
-    public void setAlcool(String Alcool) {this.Alcool = Alcool;}
+    public void setAlcool(Boolean Alcool) {this.Alcool = Alcool;}
 
 
 
@@ -78,7 +78,7 @@ public class Biere extends Produit {
         return prix;
     }
 
-    public boolean setActive (boolean active) {
+    public boolean setAlcool (boolean active) {
         Active = active;
         return active;
     }
@@ -89,7 +89,9 @@ public class Biere extends Produit {
     }
 
 
+    public void setAlcool(String text) {
     }
+}
 
 
 

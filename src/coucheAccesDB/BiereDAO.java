@@ -1,14 +1,10 @@
 package coucheAccesDB;
 
 
-import ClassMetier.Biere;
-import ClassMetier.*;
-import couchePresentation.*;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
+import ClassMetier.*;
 
 public class BiereDAO extends BaseDAO<Biere>
 {

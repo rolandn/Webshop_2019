@@ -68,8 +68,9 @@ public class AjouterAlcool
      * Constructeur : il crée la fenêtre
      *
      * @param  : l'objet Stage représentant la fenêtre principale
+     * @param fenetre
      */
-    public AjouterAlcool() {
+    public AjouterAlcool(Stage fenetre) {
         GPSaisies.add(new Label("Numéro d'article"), 0, 0);
         GPSaisies.add(TFNumArticle, 1, 0);
 

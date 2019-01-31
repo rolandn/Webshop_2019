@@ -25,8 +25,8 @@ public class ListerAlcool extends BaseFenetre{
     public ListerAlcool(Stage fenParent)
     {
             // créer la fenêtre
-        super(fenParent, "ListerProfesseursVue.xml", "Lister les alcools", 475, 300);
-            // ajouter la liste des professeurs à la table TVProfs
+        super(fenParent, "ListerAlcoolVue.xml", "Lister les alcools", 475, 300);
+            // ajouter la liste des professeurs à la table TVAlcool
 
         TVAlcool.itemsProperty().setValue(FXCollections.observableArrayList(
                 FabriqueDAO.getInstance().getInstAlcoolDAO().ListerTous()));
@@ -36,7 +36,7 @@ public class ListerAlcool extends BaseFenetre{
                     "Il n'y a aucun alcool dans la base de données!");
             return;
         }
-// gérer l'affichage de l'image quand on clique sur un professeur dans la table
+// gérer l'affichage de l'image quand on clique sur un alcool dans la table
         TVAlcool.getSelectionModel().selectedItemProperty().addListener((obs, ancAlcool,
                                                                         nouvAlcool) ->
         {

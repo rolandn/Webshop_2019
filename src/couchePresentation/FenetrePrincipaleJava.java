@@ -58,7 +58,7 @@ public class FenetrePrincipaleJava extends Application
             FabriqueDAO.getInstance().creerConnexion();
         }
         catch (Exception e) {
-            GererErreur.erreurGen("FenetrePrincipale", "start()", e.getMessage());
+            GererErreur.ErreurGen("FenetrePrincipale", "start()", e.getMessage());
             System.out.println("Problème pour se connecter à la base de données!");
             System.exit(0);
         }
@@ -78,7 +78,7 @@ public class FenetrePrincipaleJava extends Application
     @FXML
     private void MModifierStockBiere(ActionEvent event) {new ModifierStock(Fenetre); }
     @FXML
-    private void MArchiveBiere(ActionEvent event) {new (Fenetre); }
+    private void MArchiveBiere(ActionEvent event) {new ArchiverBiere (Fenetre); }
 
 
     /**
@@ -86,21 +86,18 @@ public class FenetrePrincipaleJava extends Application
      *                        ALCOOL
      */
     @FXML
-    private void BAjouterAlcool(ActionEvent event) {new AjouterAlcool(Fenetre); }
-    @FXML
-    private void MModifierStockAlcool(ActionEvent event) {new ModifierStock(Fenetre); }
-    @FXML
-    private void ArchiveAlcool(ActionEvent event) {new (Fenetre); }
-    @FXML
-    private void MAjouterResultat(ActionEvent event)
+    private void MListerAlcool(ActionEvent event)
     {
-        new AjouterResultat(Fenetre);
+        new ListerAlcool(Fenetre);
     }
     @FXML
-    private void MListerResultatsEleve(ActionEvent event)
-    {
-        new ListerResultatsEleve(Fenetre);
-    }
+    private void MAjouterAlcool(ActionEvent event) {new AjouterAlcool(Fenetre); }
+    @FXML
+    private void MModifierStockAlcool(ActionEvent event) {new ModifierStockAlcool(Fenetre); }
+    @FXML
+    private void MArchiveAlcool(ActionEvent event) {new ArchiveAlcool(Fenetre); }
+
+
 
     /**
      * Méthodes exécutées lorsque l'utilisateur clique sur les rubriques des menus

@@ -1,8 +1,7 @@
 package couchePresentation;
 
 import ClassMetier.*;
-import ClassMetier.Biere;
-import coucheAccesDB.FabriqueDAO;
+import coucheAccesDB.*;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -28,7 +27,8 @@ public class ListerBiere extends BaseFenetre {
 
         TVBiere.itemsProperty().setValue(FXCollections.observableArrayList(
                 FabriqueDAO.getInstance().getInstBiereDAO().ListerTous()));
-        if (TVBiere.getItems().size() == 0) {
+        if (TVBiere.getItems().size() == 0)
+        {
             new MsgBox(this, AlertType.INFORMATION,
                     "Il n'y a aucune bière dans la base de données!");
             return;

@@ -57,7 +57,7 @@ import coucheAccesDB.*;
 
 
 
-        public ModifierStock() {
+        public ModifierStock(Stage fenetre) {
 
             /**
              * On affiche d'abord la liste des produits
