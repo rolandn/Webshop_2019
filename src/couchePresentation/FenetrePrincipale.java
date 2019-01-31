@@ -78,7 +78,7 @@ public class FenetrePrincipale extends Application {
 
         // Actions liées éléments de menu
 
-        MIAjouterClient.setOnAction(event -> {
+       /* MIAjouterClient.setOnAction(event -> {
             new AjouterClient();
         });
         MISupprimerClient.setOnAction(event -> {
@@ -110,7 +110,7 @@ public class FenetrePrincipale extends Application {
         MICOmmandesClient.setOnAction(event -> {
             new CommandesClient();
         });
-
+*/
         QuitterProgramme.setOnAction(event -> {
             System.exit(0);
         });

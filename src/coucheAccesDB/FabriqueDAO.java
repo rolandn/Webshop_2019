@@ -1,7 +1,7 @@
 package coucheAccesDB;
 
-import ClassMetier.Commande;
-import org.jetbrains.annotations.Contract;
+import ClassMetier.*;
+import couchePresentation.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,13 +15,12 @@ public class FabriqueDAO
 
     private  FabriqueDAO(){}
 
-    @Contract(pure = true)
     public static  FabriqueDAO getInstance()
     {
         return instance;
     }
 
-    public  void  creerConnexion() throws ExceptionAccessBD
+    public  void  creerConnexion() throws ExeceptionAccessBD
     {
         try
         {
@@ -35,7 +34,7 @@ public class FabriqueDAO
         catch (Exception e)
         {
             e.printStackTrace();
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
     }
 
@@ -46,6 +45,8 @@ public class FabriqueDAO
 
     public AlcoolDAO getInstAlcoolDAO() {return new AlcoolDAO(SqlConn);}
 
+    public Object getInstBiereDAO() {return new BiereDAO(SqlConn);}
+
     public ProduitDAO getInsProduitDAO() {return new ProduitDAO(SqlConn);}
 
     public CommandeDAO getInsCommandeDAO() {return  new CommandeDAO(SqlConn);}
@@ -53,5 +54,5 @@ public class FabriqueDAO
 
     public LigneComDAO getInsLigneComDAO() {return new LigneComDAO(SqlConn);}
 
-    public Object getBiereDAO() {return new BiereDAO(SqlConn);}
+
 }

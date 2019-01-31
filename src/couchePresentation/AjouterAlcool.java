@@ -1,6 +1,5 @@
 package couchePresentation;
 
-import com.intellij.diagnostic.TestMessageBoxAction;
 import javafx.geometry.Insets;
 import javafx.scene.*;
 import javafx.scene.control.*;

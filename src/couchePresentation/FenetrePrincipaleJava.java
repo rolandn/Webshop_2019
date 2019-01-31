@@ -1,6 +1,13 @@
 package couchePresentation;
 import coucheAccesDB.*;
 
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
 import java.net.URL;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -35,7 +42,7 @@ public class FenetrePrincipaleJava extends Application
             System.exit(0);
         }
 // paramétrer et afficher la fenêtre principale
-        fenetre.setTitle("Ecole Fantastique");
+        fenetre.setTitle("Web Shop");
         fenetre.setResizable(false);
         fenetre.centerOnScreen();
         fenetre.show();
@@ -51,7 +58,9 @@ public class FenetrePrincipaleJava extends Application
             FabriqueDAO.getInstance().creerConnexion();
         }
         catch (Exception e) {
-
+            GererErreur.erreurGen("FenetrePrincipale", "start()", e.getMessage());
+            System.out.println("Problème pour se connecter à la base de données!");
+            System.exit(0);
         }
 
 
@@ -60,41 +69,28 @@ public class FenetrePrincipaleJava extends Application
     }
     /**
      * Méthodes exécutées lorsque l'utilisateur clique sur les rubriques des menus
+     *                      BIERE
      */
     @FXML
-    private void MListerProfs(ActionEvent event)
-    {
-        new ListerClient(Fenetre);
-    }
+    private void MListerBiere(ActionEvent event) {new ListerBiere(Fenetre); }
+    @FXML
+    private void MAjouterBiere(ActionEvent event){new AjouterBiere(Fenetre); }
+    @FXML
+    private void MModifierStockBiere(ActionEvent event) {new ModifierStock(Fenetre); }
+    @FXML
+    private void MArchiveBiere(ActionEvent event) {new (Fenetre); }
 
 
-
+    /**
+     * Méthodes exécutées lorsque l'utilisateur clique sur les rubriques des menus
+     *                        ALCOOL
+     */
     @FXML
-    private void MListerCours(ActionEvent event)
-    {
-        new ListerCours(Fenetre);
-    }
+    private void BAjouterAlcool(ActionEvent event) {new AjouterAlcool(Fenetre); }
     @FXML
-    private void MListerEleves(ActionEvent event)
-    {
-        new ListerEleves(Fenetre);
-    }
+    private void MModifierStockAlcool(ActionEvent event) {new ModifierStock(Fenetre); }
     @FXML
-    private void MAjouterEleve(ActionEvent event)
-    {
-        new BAjouterAlcool(Fenetre);
-    }
-    @FXML
-    private void MModifierEleve(ActionEvent event)
-    {
-        new ModifierStock(Fenetre);
-    }
-    @FXML
-    private void MSupprimerEleve(ActionEvent event)
-    {
-        new SupprimerEleve(Fenetre);
-
-    }
+    private void ArchiveAlcool(ActionEvent event) {new (Fenetre); }
     @FXML
     private void MAjouterResultat(ActionEvent event)
     {
@@ -105,6 +101,11 @@ public class FenetrePrincipaleJava extends Application
     {
         new ListerResultatsEleve(Fenetre);
     }
+
+    /**
+     * Méthodes exécutées lorsque l'utilisateur clique sur les rubriques des menus
+     *                        QUITTER
+     */
     @FXML
     private void MQuitter(ActionEvent event)
     {

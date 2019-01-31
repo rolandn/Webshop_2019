@@ -13,19 +13,19 @@
             <menus>
                 <Menu text="Bières">
                     <items>
-                        <MenuItem text="Lister les bières" onAction="#" />
-                        <MenuItem text="Ajouter une bière" onAction="#BAjouterBiere" />
-                        <MenuItem text="Modifier la quantité en stock" onAction="#" />
-                        <MenuItem text="Archiver/désarchiver une bière" onAction="#" />
+                        <MenuItem text="Lister les bières" onAction="#MListerBiere" />
+                        <MenuItem text="Ajouter une bière" onAction="#MAjouterBiere" />
+                        <MenuItem text="Modifier la quantité en stock" onAction="#MModifierStockBiere" />
+                        <MenuItem text="Archiver/désarchiver une bière" onAction="#MArchiveBiere" />
                     </items>
                 </Menu>
 
                 <Menu text="Alcools">
                     <items>
                         <MenuItem text="Lister les alcools" onAction="#" />
-                        <MenuItem text="Ajouter une alcool" onAction="#BAjouterAlcool" />
-                        <MenuItem text="Modifier la quantité en stock" onAction="#" />
-                        <MenuItem text="Archiver/désarchiver un alcool" onAction="#" />
+                        <MenuItem text="Ajouter une alcool" onAction="#MAjouterAlcool" />
+                        <MenuItem text="Modifier la quantité en stock" onAction="#MModifierStockAlcool" />
+                        <MenuItem text="Archiver/désarchiver un alcool" onAction="#MArchiveAlcool" />
                     </items>
                 </Menu>
 

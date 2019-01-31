@@ -41,7 +41,7 @@ public class ListerAlcool extends BaseFenetre{
                                                                         nouvAlcool) ->
         {
             if (nouvAlcool != null)
-                IVImage.setImage(new Image("file:imgs/imgsprofs/" + nouvProf.getNomImage()));
+                IVImage.setImage(new Image("file:imgs/imgsprofs/" + nouvAlcool.getNomImage()));
         });
 // sélectionner le 1er prof dans la table TVProfs
         TVAlcool.getSelectionModel().selectFirst();

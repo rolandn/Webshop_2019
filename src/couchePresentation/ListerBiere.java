@@ -1,8 +1,9 @@
 package couchePresentation;
 
-import ClassMetier.Alcool;
+import ClassMetier.*;
 import ClassMetier.Biere;
 import coucheAccesDB.FabriqueDAO;
+
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

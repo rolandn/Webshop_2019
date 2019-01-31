@@ -33,7 +33,7 @@ public class CommandeDAO extends BaseDAO<Commande> {
      * @param idCommande
      */
     @Override
-    public Commande Charger(int idCommande) throws ExceptionAccessBD {
+    public Commande Charger(int idCommande) throws ExeceptionAccessBD, ExeceptionAccessBD {
         Commande commande = null;
 
         try
@@ -63,17 +63,17 @@ public class CommandeDAO extends BaseDAO<Commande> {
 
         }catch (Exception e)
         {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
     }
 
     @Override
-    public boolean Ajouter(Commande obj) throws ExceptionAccessBD {
+    public boolean Ajouter(Commande obj) throws ExeceptionAccessBD {
         return false;
     }
 
     @Override
-    public boolean Modifier(Commande obj) throws ExceptionAccessBD {
+    public boolean Modifier(Commande obj) throws ExeceptionAccessBD, ExeceptionAccessBD {
         try {
             PreparedStatement sqlCmd = SqlConn.prepareCall("UPDATE Commande " +
                     "SET livre = ? " +
@@ -85,17 +85,17 @@ public class CommandeDAO extends BaseDAO<Commande> {
 
             return (sqlCmd.executeUpdate() == 0)? false : true;
         } catch (Exception e) {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
     }
 
     @Override
-    public boolean Supprimer(int num) throws ExceptionAccessBD {
+    public boolean Supprimer(int num) throws ExeceptionAccessBD {
         return false;
     }
 
     @Override
-    public List<Commande> ListerTous() throws ExceptionAccessBD {
+    public List<Commande> ListerTous() throws ExeceptionAccessBD, ExeceptionAccessBD {
         List<Commande> liste = new ArrayList<>();
 
         try {
@@ -117,7 +117,7 @@ public class CommandeDAO extends BaseDAO<Commande> {
 
             sqlRes.close();
         } catch (Exception e) {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
 
         return liste;

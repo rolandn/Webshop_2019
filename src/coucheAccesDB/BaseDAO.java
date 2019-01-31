@@ -1,6 +1,5 @@
 package coucheAccesDB;
 
-import com.intellij.ide.ui.EditorOptionsTopHitProvider;
 
 import java.util.List;
 import java.sql.Connection;

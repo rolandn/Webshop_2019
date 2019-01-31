@@ -1,7 +1,9 @@
 package coucheAccesDB;
 
-import ClassMetier.Alcool;
+
 import ClassMetier.Biere;
+import ClassMetier.*;
+import couchePresentation.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.Insets?>
+
 <VBox xmlns:fx="http://javafx.com/fxml">
     <children>
         <HBox spacing="15">
@@ -13,10 +15,11 @@
                     <children>
                         <Label text="NumArticle: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
                         <TextField fx:id="TFNumArticle" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
                         <Label text="Nom: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
                         <TextField fx:id="TFNom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="Prix : " GridPane.columnIndex="0"
-                               GridPane.rowIndex="2" prefWidth="160" />
+
+                        <Label text="Prix : " GridPane.columnIndex="0" GridPane.rowIndex="2" prefWidth="160" />
                         <TextField fx:id="TFPrix" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="70" />
 
                         <Label text="Quantité en stock: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
@@ -29,7 +32,7 @@
                         <TextField fx:id="TFRecipient" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
 
-                        <ComboBox fx:id="CBAlcool" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <ComboBox fx:id="CBBiere" GridPane.columnIndex="1" GridPane.rowIndex="3">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
                                     <String fx:value="1" />
@@ -78,7 +81,7 @@
 
         <HBox spacing="15">
             <children>
-                <Button fx:id="BAjouter" prefWidth="80" prefHeight="20" onAction="#BAjouterEleve"
+                <Button fx:id="BAjouter" prefWidth="80" prefHeight="20" onAction="#BAjouterBiere"
                         text="Ajouter" />
                 <Button fx:id="BFermer" prefWidth="80" prefHeight="20" onAction="#BFermer" text="Fermer" />
             </children>

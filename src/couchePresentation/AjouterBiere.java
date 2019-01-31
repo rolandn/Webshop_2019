@@ -1,8 +1,8 @@
 package couchePresentation;
 
-import  ClassMetier.*;
+import ClassMetier.*;
 import coucheAccesDB.*;
-import couchePresentation.*;
+import vues.*;
 
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 import javafx.event.ActionEvent;
@@ -22,12 +22,19 @@ public class AjouterBiere extends BaseFenetre {
 
     @FXML private TextField TFNumArticle;
     @FXML private TextField TFNom;
-    @FXML private ImageView TFNomImage;
+    @FXML private TextField TFNomImage;
     @FXML private TextField TFPrix;
     @FXML private TextField TFQuantiteStock;
     @FXML private TextField TFGout;
     @FXML private TextField CBAlcool;
     @FXML private TextField TFRecipient;
+    @FXML private javafx.scene.image.ImageView IVImage;
+    @FXML private ImageView IVImage;
+    @FXML private Button BChargerImage;
+    @FXML private Button BFermer;
+    @FXML private Button BAjouter;
+
+
 
     private File FichierSrc = null;
 
@@ -58,29 +65,31 @@ public class AjouterBiere extends BaseFenetre {
         if(FichierSrc != null)
         {
             TFNomImage.setText(FichierSrc.getName());
-            NomImage.setImage(new Image("file:" + FichierSrc.getPath()));
+            IVImage.setImage(new Image("file:" + FichierSrc.getPath()));
         }
     }
+
 
     /**
      * méthode exécutée quand on clique sur le bouton Ajouter
      */
     @FXML
-    private void BAjouterBiere()
+    private void MAjouterBiere()
     {
         try
         {
             Biere biere = new Biere();
-            biere.setNumArticle(TFNumArticle.getText());
+
+            biere.setNumArticle(Integer.parseInt(TFNumArticle.getText()));
             biere.setNom(TFNom.getText());
-            biere.setNomImage(Integer.parseInt(TFNomImage.getText()));
-            biere.setPrix(Integer.parseInt(TFPrix.getValue()));
+            biere.setNomImage(Integer.parseInt(String.valueOf(TFNomImage.getImage())));
+            biere.setPrix(Integer.parseInt(TFPrix.getText()));
             biere.setQuantiteStock(Integer.parseInt(TFQuantiteStock.getText()));
             biere.setGout(TFGout.getText());
             biere.setRecipient(TFRecipient.getText());
             biere.setAlcool(CBAlcool.getText());
 
-            if (FabriqueDAO.getInstance().getBiereDAO().ajouter(biere) == false)
+            if (FabriqueDAO.getInstance().getInstBiereDAO().Ajouter(biere) == false)
                 new MsgBox(this, AlertType.INFORMATION, "L'ajout n'a pas eu lieu!");
             else
             {
@@ -99,7 +108,7 @@ public class AjouterBiere extends BaseFenetre {
         }
         catch(ExeceptionAccessBD e)
         {
-            GererErreur.erreurGen("AjouterBiere", "BAjouterBiere()", e.getMessage());
+            GererErreur.ErreurGen("AjouterBiere", "BAjouterBiere()", e.getMessage());
             new MsgBox(this, AlertType.ERROR,
                     "Problème de base de données lors de l'ajout de l'élève!");
         }
@@ -110,7 +119,7 @@ public class AjouterBiere extends BaseFenetre {
         }
         catch (Exception e)
         {
-            GererErreur.erreurGen("AjouterBiere", "BAjouterBiere()", e.getMessage());
+            GererErreur.ErreurGen("AjouterBiere", "BAjouterBiere()", e.getMessage());
             new MsgBox(this, AlertType.ERROR, "Problème inattendu lors de l'ajout de l'élève!");
         }
         close();
