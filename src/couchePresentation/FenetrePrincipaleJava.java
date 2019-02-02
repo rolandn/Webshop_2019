@@ -77,8 +77,8 @@ public class FenetrePrincipaleJava extends Application
     private void MAjouterBiere(ActionEvent event){new AjouterBiere(Fenetre); }
     @FXML
     private void MModifierStockBiere(ActionEvent event) {new ModifierStock(Fenetre); }
-    @FXML
-    private void MArchiveBiere(ActionEvent event) {new ArchiverBiere (Fenetre); }
+//    @FXML
+//    private void MArchiveBiere(ActionEvent event) {new ArchiverBiere (Fenetre); }
 
 
     /**
@@ -92,10 +92,10 @@ public class FenetrePrincipaleJava extends Application
     }
     @FXML
     private void MAjouterAlcool(ActionEvent event) {new AjouterAlcool(Fenetre); }
-    @FXML
-    private void MModifierStockAlcool(ActionEvent event) {new ModifierStockAlcool(Fenetre); }
-    @FXML
-    private void MArchiveAlcool(ActionEvent event) {new ArchiveAlcool(Fenetre); }
+//    @FXML
+//    private void MModifierStockAlcool(ActionEvent event) {new ModifierStockAlcool(Fenetre); }
+//    @FXML
+//    private void MArchiveAlcool(ActionEvent event) {new ArchiveAlcool(Fenetre); }
 
 
 

@@ -80,16 +80,17 @@ public class AjouterBiere extends BaseFenetre {
         {
             Biere biere = new Biere();
 
+
             biere.setNumArticle(Integer.parseInt(TFNumArticle.getText()));
             biere.setNom(TFNom.getText());
-            biere.setNomImage(Integer.parseInt(String.valueOf(TFNomImage.getImage())));
+            biere.setNomImage(TFNomImage.getText());
             biere.setPrix(Integer.parseInt(TFPrix.getText()));
             biere.setQuantiteStock(Integer.parseInt(TFQuantiteStock.getText()));
             biere.setGout(TFGout.getText());
             biere.setRecipient(TFRecipient.getText());
             biere.setAlcool(CBAlcool.getText());
 
-            if (FabriqueDAO.getInstance().getInstBiereDAO().Ajouter(biere) == false)
+            if ((FabriqueDAO.getInstance().getInstBiereDAO()).Ajouter(biere) == false)
                 new MsgBox(this, AlertType.INFORMATION, "L'ajout n'a pas eu lieu!");
             else
             {

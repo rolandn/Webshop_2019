@@ -19,6 +19,7 @@ public class Produit
         NumArticle = produit.getNumArticle();
         Nom = produit.getNom();
         NomImage = produit.getNomImage();
+
         Prix = produit.getPrix();
         QuantiteStock = produit.getQuantiteStock();
         Active = produit.getActive();
@@ -72,6 +73,8 @@ public class Produit
     public String getNomImage() {
         return NomImage;
     }
+
+    public void setNomImage(String nomImage){NomImage = nomImage;};
 
     public int getPrix() {
         return Prix;
