@@ -1,3 +1,4 @@
+/*
 package couchePresentation;
 
 
@@ -59,9 +60,11 @@ import coucheAccesDB.*;
 
         public ModifierStock(Stage fenetre) {
 
-            /**
+            */
+/**
              * On affiche d'abord la liste des produits
-             */
+             *//*
+
 
 
             try {
@@ -86,9 +89,11 @@ import coucheAccesDB.*;
             CBProduit.getSelectionModel().selectFirst();
 
 
-            /**
+            */
+/**
              * On gérer le changement de Produit courant dans la boîte combo CBChoixProduit
-             */
+             *//*
+
 
             CBProduit.getSelectionModel().selectedItemProperty().addListener((obs,
                                                                                    ancProduit, nouvProduit) ->
@@ -210,4 +215,4 @@ import coucheAccesDB.*;
             TFChangementQuantite.setText(String.valueOf(nouvProduit.getQuantiteStock()));
             TFArchiver.setText(String.valueOf(nouvProduit.getActive()));
         }
-    }
+    }*/

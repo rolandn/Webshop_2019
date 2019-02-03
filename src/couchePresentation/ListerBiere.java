@@ -11,6 +11,8 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.*;
 import javafx.stage.Stage;
 
+
+
 public class ListerBiere extends BaseFenetre {
 
     @FXML private TableView<Biere> TVBiere;

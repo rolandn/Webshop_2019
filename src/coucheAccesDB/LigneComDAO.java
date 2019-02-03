@@ -1,3 +1,4 @@
+/*
 package coucheAccesDB;
 
 
@@ -8,18 +9,22 @@ import ClassMetier.LigneCom;
 
 public class LigneComDAO extends BaseDAO<LigneCom>
 {
-    /**
+    */
+/**
      * Constructeur
-     */
+     *//*
+
     public LigneComDAO(Connection sqlConn) {
         super(sqlConn);
     }
 
-    /**
+    */
+/**
      * Méthode qui lit dans la DB une ligne spécifique
      *
      * @param num : le numéro de ligne de commande
-     */
+     *//*
+
 
     public LigneCom Charger(int num) throws ExceptionAccessBD
     {
@@ -116,3 +121,4 @@ public class LigneComDAO extends BaseDAO<LigneCom>
             return list;
     }
 }
+*/

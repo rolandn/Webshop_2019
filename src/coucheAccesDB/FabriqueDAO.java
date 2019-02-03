@@ -38,10 +38,7 @@ public class FabriqueDAO
         }
     }
 
-    public ClientDAO getInstClientDAO()
-    {
-        return new ClientDAO(SqlConn);
-    }
+ //   public ClientDAO getInstClientDAO() {return new ClientDAO(SqlConn); }
 
     public AlcoolDAO getInstAlcoolDAO() {return new AlcoolDAO(SqlConn);}
 
@@ -52,7 +49,7 @@ public class FabriqueDAO
     public CommandeDAO getInsCommandeDAO() {return  new CommandeDAO(SqlConn);}
 
 
-    public LigneComDAO getInsLigneComDAO() {return new LigneComDAO(SqlConn);}
+//    public LigneComDAO getInsLigneComDAO() {return new LigneComDAO(SqlConn);}
 
 
 }

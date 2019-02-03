@@ -1,5 +1,6 @@
 package couchePresentation;
 import coucheAccesDB.*;
+import ClassMetier.*;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -59,7 +60,7 @@ public class FenetrePrincipaleJava extends Application
         }
         catch (Exception e) {
             GererErreur.ErreurGen("FenetrePrincipale", "start()", e.getMessage());
-            System.out.println("Problème pour se connecter à la base de données!");
+            System.out.println("Problème pour se connecter à la base de données! Zut Alors !!");
             System.exit(0);
         }
 
@@ -75,8 +76,8 @@ public class FenetrePrincipaleJava extends Application
     private void MListerBiere(ActionEvent event) {new ListerBiere(Fenetre); }
     @FXML
     private void MAjouterBiere(ActionEvent event){new AjouterBiere(Fenetre); }
-    @FXML
-    private void MModifierStockBiere(ActionEvent event) {new ModifierStock(Fenetre); }
+//    @FXML
+//    private void MModifierStockBiere(ActionEvent event) {new ModifierStock(Fenetre); }
 //    @FXML
 //    private void MArchiveBiere(ActionEvent event) {new ArchiverBiere (Fenetre); }
 
@@ -90,8 +91,8 @@ public class FenetrePrincipaleJava extends Application
     {
         new ListerAlcool(Fenetre);
     }
-    @FXML
-    private void MAjouterAlcool(ActionEvent event) {new AjouterAlcool(Fenetre); }
+//    @FXML
+//    private void MAjouterAlcool(ActionEvent event) {new AjouterAlcool(Fenetre); }
 //    @FXML
 //    private void MModifierStockAlcool(ActionEvent event) {new ModifierStockAlcool(Fenetre); }
 //    @FXML

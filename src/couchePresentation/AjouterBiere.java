@@ -2,7 +2,12 @@ package couchePresentation;
 
 import ClassMetier.*;
 import coucheAccesDB.*;
-import vues.*;
+
+import java.net.URL;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.*;
+
 
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 import javafx.event.ActionEvent;
@@ -29,7 +34,7 @@ public class AjouterBiere extends BaseFenetre {
     @FXML private TextField CBAlcool;
     @FXML private TextField TFRecipient;
     @FXML private javafx.scene.image.ImageView IVImage;
-    @FXML private ImageView IVImage;
+//    @FXML private ImageView IVImage;
     @FXML private Button BChargerImage;
     @FXML private Button BFermer;
     @FXML private Button BAjouter;
@@ -113,11 +118,12 @@ public class AjouterBiere extends BaseFenetre {
             new MsgBox(this, AlertType.ERROR,
                     "Problème de base de données lors de l'ajout de l'élève!");
         }
-        catch (ExceptionMetier e)
+
+        /*catch (ExceptionMetier e)
         {
             new MsgBox(this, AlertType.WARNING, e.getMessage());
             return;
-        }
+        }*/
         catch (Exception e)
         {
             GererErreur.ErreurGen("AjouterBiere", "BAjouterBiere()", e.getMessage());

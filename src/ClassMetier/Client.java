@@ -1,6 +1,5 @@
 package ClassMetier;
 
-import com.intellij.openapi.vcs.history.VcsRevisionNumber;
 
 public class Client
 {
@@ -83,8 +82,8 @@ public class Client
 
     /**
      *  CONSTRUCTEURS
-     * @param num
-     * @param string
+     * @param
+     * @param
      */
 
     public Client()

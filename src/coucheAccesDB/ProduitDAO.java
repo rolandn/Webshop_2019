@@ -21,12 +21,12 @@ public class ProduitDAO extends BaseDAO<Produit>
     }
 
     @Override
-    public Produit Charger(int num) throws ExceptionAccessBD {
+    public Produit Charger(int num) throws ExeceptionAccessBD {
         return null;
     }
 
     @Override
-    public boolean Ajouter(Produit obj) throws ExceptionAccessBD {
+    public boolean Ajouter(Produit obj) throws ExeceptionAccessBD {
         return false;
     }
 
@@ -35,7 +35,7 @@ public class ProduitDAO extends BaseDAO<Produit>
      *
      */
     @Override
-    public boolean Modifier(Produit obj) throws ExceptionAccessBD {
+    public boolean Modifier(Produit obj) throws ExeceptionAccessBD {
 
         try {
             PreparedStatement sqlCmd = SqlConn.prepareCall("UPDATE produit SET quantiteStock = ?, Active = ? WHERE NumArticle = ?");
@@ -47,18 +47,18 @@ public class ProduitDAO extends BaseDAO<Produit>
             return (sqlCmd.executeUpdate() == 0)? false : true;
 
         } catch (Exception e) {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
 
     }
 
     @Override
-    public boolean Supprimer(int num) throws ExceptionAccessBD {
+    public boolean Supprimer(int num) throws ExeceptionAccessBD {
         return false;
     }
 
     @Override
-    public List<Produit> ListerTous() throws ExceptionAccessBD {
+    public List<Produit> ListerTous() throws ExeceptionAccessBD {
 
         ArrayList<Produit> list = new ArrayList<>();
 
@@ -80,13 +80,13 @@ public class ProduitDAO extends BaseDAO<Produit>
 
         catch (Exception e)
         {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
 
         return list;
     }
 
-    public  List<Produit> ListerCommande(int idCommande)throws ExceptionAccessBD
+    public  List<Produit> ListerCommande(int idCommande)throws ExeceptionAccessBD
     {
         List<Produit> liste = new ArrayList<>();
 
@@ -115,7 +115,7 @@ public class ProduitDAO extends BaseDAO<Produit>
 
             sqlRes.close();
         } catch (Exception e) {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
 
         return liste;

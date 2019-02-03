@@ -1,6 +1,6 @@
 package couchePresentation;
 
-import vues.*;
+
 import coucheAccesDB.*;
 import ClassMetier.*;
 

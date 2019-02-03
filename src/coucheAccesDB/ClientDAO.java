@@ -22,7 +22,7 @@ public class ClientDAO extends BaseDAO<Client>
      * Le caractère "?" en sql correspond à "1" dans sqlCmd et qui renvoie le "num".
      */
 
-    public Client Charger(int num) throws ExceptionAccessBD {
+    public Client Charger(int num) throws ExeceptionAccessBD {
         Client client = null;
 
         try {
@@ -48,7 +48,7 @@ public class ClientDAO extends BaseDAO<Client>
 
         catch (Exception e)
         {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
     }
 
@@ -59,7 +59,7 @@ public class ClientDAO extends BaseDAO<Client>
      * @return un booléen qui indique si l'ajout s'est bien passé
      */
 
-    public boolean Ajouter(Client obj) throws ExceptionAccessBD {
+    public boolean Ajouter(Client obj) throws ExeceptionAccessBD {
         try {
             PreparedStatement sqlCmd = SqlConn.prepareCall("select max(numClient) + 1 from client");
             ResultSet sqlRes = sqlCmd.executeQuery();
@@ -85,7 +85,7 @@ public class ClientDAO extends BaseDAO<Client>
 
         catch (Exception e)
         {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
     }
 
@@ -97,7 +97,7 @@ public class ClientDAO extends BaseDAO<Client>
      */
 
     @Override
-    public boolean Modifier(Client obj) throws ExceptionAccessBD {
+    public boolean Modifier(Client obj) throws ExeceptionAccessBD {
         try {
             PreparedStatement sqlCmd = SqlConn.prepareCall("update client" +
                     "set numClient = ?, " +
@@ -115,7 +115,7 @@ public class ClientDAO extends BaseDAO<Client>
 
             return (sqlCmd.executeUpdate() == 0) ? false : true;
         } catch (Exception e) {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
 
     }
@@ -127,7 +127,7 @@ public class ClientDAO extends BaseDAO<Client>
      * @return un booléen qui indique si l'opération s'est bien déroulée ou pas
      */
 
-    public boolean Supprimer(int num) throws ExceptionAccessBD
+    public boolean Supprimer(int num) throws ExeceptionAccessBD
     {
         try
         {
@@ -155,7 +155,7 @@ public class ClientDAO extends BaseDAO<Client>
             {
             }
 
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
     }
 
@@ -165,7 +165,7 @@ public class ClientDAO extends BaseDAO<Client>
      */
 
     @Override
-    public List<Client> ListerTous() throws ExceptionAccessBD
+    public List<Client> ListerTous() throws ExeceptionAccessBD
     {
         ArrayList<Client> list = new ArrayList<>();
 
@@ -188,7 +188,7 @@ public class ClientDAO extends BaseDAO<Client>
 
         catch (Exception e)
         {
-            throw new ExceptionAccessBD(e.getMessage());
+            throw new ExeceptionAccessBD(e.getMessage());
         }
 
         return list;

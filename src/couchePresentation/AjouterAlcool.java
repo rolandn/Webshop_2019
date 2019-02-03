@@ -1,3 +1,4 @@
+/*
 package couchePresentation;
 
 import javafx.geometry.Insets;
@@ -46,9 +47,11 @@ public class AjouterAlcool
 
 
 
-    /**
+    */
+/**
      * Ouvrir une boîte de dialogue permettant de sélectionner une image sur un disque
-     */
+     *//*
+
 
     private void OuvrirFichierImg()
     {
@@ -64,12 +67,14 @@ public class AjouterAlcool
         }
     }
 
-    /**
+    */
+/**
      * Constructeur : il crée la fenêtre
      *
      * @param  : l'objet Stage représentant la fenêtre principale
      * @param fenetre
-     */
+     *//*
+
     public AjouterAlcool(Stage fenetre) {
         GPSaisies.add(new Label("Numéro d'article"), 0, 0);
         GPSaisies.add(TFNumArticle, 1, 0);
@@ -167,9 +172,11 @@ public class AjouterAlcool
         Fenetre.showAndWait();
     }
 
-    /**
+    */
+/**
      * Méthode qui exécute l'ajout quand on clique sur le bouton ajouter.
-     */
+     *//*
+
 
     private void BAjouterAlcool() {
         try {
@@ -221,3 +228,4 @@ public class AjouterAlcool
     }
 
 }
+*/
